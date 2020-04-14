@@ -1,10 +1,14 @@
 package com.majorik.arcoreimagescanner
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.majorik.arcoreimagescanner.ui.arscene.ScannerActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,5 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNav?.setupWithNavController(navController)
+
+        btn_scanner.setOnClickListener {
+            startActivity(Intent(this, ScannerActivity::class.java))
+        }
     }
 }
