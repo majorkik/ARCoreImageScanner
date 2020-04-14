@@ -15,10 +15,13 @@ import com.majorik.arcoreimagescanner.extensions.*
 import com.majorik.arcoreimagescanner.utils.AugmentedImageNode
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_scanner.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.io.IOException
 import java.io.InputStream
 
 class ScannerActivity : AppCompatActivity() {
+
+    private val viewModel: ScannerViewModel by viewModel()
 
     private var installRequested = false
 
