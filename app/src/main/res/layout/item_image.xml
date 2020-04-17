@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:foreground="@drawable/bg_image_foreground_gradient"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/btn_remove"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end|top"
+        android:background="@color/transparent"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_round_clear"
+        android:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/white" />
+
+</androidx.cardview.widget.CardView>

@@ -22,6 +22,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            debuggable false
+            minifyEnabled true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 
     compileOptions {
@@ -78,6 +85,15 @@ dependencies {
     implementation "androidx.room:room-runtime:2.2.5"
     kapt "androidx.room:room-compiler:2.2.5"
     implementation "androidx.room:room-ktx:2.2.5"
+
+    //Image loader
+    implementation "io.coil-kt:coil:0.9.5"
+
+    //Image picker
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.2.0'
+
+    //Klock
+    implementation "com.soywiz.korlibs.klock:klock-jvm:1.8.4"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13'

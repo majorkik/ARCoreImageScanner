@@ -3,7 +3,6 @@ package com.majorik.arcoreimagescanner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -17,12 +16,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val host: NavHostFragment = supportFragmentManager
-            .findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment? ?: return
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
 
         val navController = host.navController
 
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNav?.setupWithNavController(navController)
+        bottomNavigationView.setupWithNavController(navController)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    navController.navigate(R.id.nav_home_fragment)
+                }
+                R.id.nav_library -> {
+                    navController.navigate(R.id.nav_library_fragment)
+                }
+            }
+
+            true
+        }
 
         btn_scanner.setOnClickListener {
             startActivity(Intent(this, ScannerActivity::class.java))

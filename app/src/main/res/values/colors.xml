@@ -7,4 +7,13 @@
     <color name="mine_shaft">#323232</color>
     <color name="torch_red">#FA163F</color>
     <color name="white">#FFFFFF</color>
+    <color name="gallery">#EEEEEE</color>
+    <color name="mercury">#E8E8E8</color>
+
+    <color name="white_alpha_25">#40FFFFFF</color>
+    <color name="mine_shaft_alpha_50">#80212121</color>
+
+    <color name="black_alpha_25">#40000000</color>
+
+    <color name="transparent">#00000000</color>
 </resources>

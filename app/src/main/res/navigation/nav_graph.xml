@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/nav_home_fragment"
-    tools:ignore="UnusedNavigation">
+    app:startDestination="@+id/nav_home_fragment">
 
     <fragment
         android:id="@+id/nav_home_fragment"
         android:name="com.majorik.arcoreimagescanner.ui.home.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_fragment_to_nav_library_fragment2"
+            app:destination="@id/nav_library_fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_library_fragment"
