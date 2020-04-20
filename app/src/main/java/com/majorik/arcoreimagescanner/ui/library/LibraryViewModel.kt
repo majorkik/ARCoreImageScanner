@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.majorik.arcoreimagescanner.data.model.Image
 import com.majorik.arcoreimagescanner.data.repositories.ImageRepository
-import com.orhanobut.logger.Logger
 import kotlinx.coroutines.launch
 
 class LibraryViewModel(private val repository: ImageRepository) : ViewModel() {
@@ -20,9 +19,9 @@ class LibraryViewModel(private val repository: ImageRepository) : ViewModel() {
         }
     }
 
-    fun deleteImageById(id: Int) {
+    fun deleteImageById(path: String) {
         viewModelScope.launch {
-            repository.deleteById(id)
+            repository.deleteById(path)
         }
     }
 }

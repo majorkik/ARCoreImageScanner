@@ -7,9 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "image_table")
 data class Image(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id") var _id: Int?,
-
+    @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "image_path")
     var imagePath: String,
 

@@ -10,5 +10,15 @@
     <string name="dialog_add_image_save">Save</string>
 
     <string name="fragment_library_library">Library</string>
+    <string name="arscene_camera_permissions">Camera permissions are needed to run this application</string>
+    <string name="arscene_camera_not_available">Camera not available. Please restart the app.</string>
+    <string name="arscene_device_not_support_ar">This device does not support AR</string>
+    <string name="arscene_please_update_app">Please update this app</string>
+    <string name="arscene_please_update_arcore">Please update ARCore</string>
+    <string name="arscene_please_install_arcore">Please install ARCore</string>
+    <string name="arscene_could_not_setup_augmented_image_database">Could not setup augmented image database</string>
+    <string name="arscene_exception_loading_augmented_image">I/O exception loading augmented image bitmap.</string>
+    <string name="arscene_exception_creating_session">Exception creating session</string>
+    <string name="arscene_progress_loading_images">Loading images</string>
 
 </resources>

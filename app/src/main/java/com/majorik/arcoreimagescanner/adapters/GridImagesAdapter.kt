@@ -69,7 +69,7 @@ class ImageDiffCallback(
     override fun getNewListSize() = newList.size
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition]._id == newList[newItemPosition]._id
+        return oldList[oldItemPosition].imagePath == newList[newItemPosition].imagePath
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {

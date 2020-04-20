@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.majorik.arcoreimagescanner.data.dao.ImageDao
 import com.majorik.arcoreimagescanner.data.model.Image
 
-@Database(entities = [Image::class], version = 2, exportSchema = false)
+@Database(entities = [Image::class], version = 3, exportSchema = false)
 abstract class ImageDatabase : RoomDatabase() {
 
     abstract fun messageDao(): ImageDao

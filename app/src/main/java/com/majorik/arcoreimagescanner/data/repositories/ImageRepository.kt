@@ -10,10 +10,10 @@ class ImageRepository(private val imageDao: ImageDao) {
     }
 
     suspend fun addImage(title: String, path: String, date: String) {
-        imageDao.addImage(Image(title = title, imagePath = path, date = date, _id = null))
+        imageDao.addImage(Image(title = title, imagePath = path, date = date))
     }
 
-    suspend fun deleteById(id: Int) {
-        imageDao.deleteById(id)
+    suspend fun deleteById(path: String) {
+        imageDao.deleteById(path)
     }
 }

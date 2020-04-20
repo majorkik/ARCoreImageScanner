@@ -24,7 +24,6 @@ class AddImageDialog : DialogFragment() {
 
     private var currentPath: String? = null
 
-    private var imageId: Int = 0
     private var imagePath: String = ""
     private var imageTitle: String = ""
 
@@ -32,7 +31,6 @@ class AddImageDialog : DialogFragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.apply {
-            imageId = getInt(IMAGE_ID_INTENT, 0)
             imagePath = getString(IMAGE_PATH_INTENT, "")
             imageTitle = getString(IMAGE_TITLE_INTENT, "")
         }
@@ -59,7 +57,7 @@ class AddImageDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (imageId > 0) {
+        if (imagePath.isNotBlank()) {
             btn_remove.setVisibility(true)
             btn_add.text = getString(R.string.dialog_add_image_save)
             image.load(File(imagePath))
@@ -116,14 +114,12 @@ class AddImageDialog : DialogFragment() {
     }
 
     companion object {
-        private const val IMAGE_ID_INTENT = "image_intent_id"
         private const val IMAGE_TITLE_INTENT = "image_intent_title"
         private const val IMAGE_PATH_INTENT = "image_intent_path"
 
         @JvmStatic
         fun newInstance(image: Image? = null) = AddImageDialog().apply {
             arguments = Bundle().apply {
-                putInt(IMAGE_ID_INTENT, image?._id ?: 0)
                 putString(IMAGE_TITLE_INTENT, image?.title ?: "")
                 putString(IMAGE_PATH_INTENT, image?.imagePath ?: "")
             }

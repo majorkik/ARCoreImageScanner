@@ -83,7 +83,7 @@ class LibraryFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     private fun removeImageById(image: Image) {
-        viewModel.deleteImageById(image._id!!)
+        viewModel.deleteImageById(image.imagePath)
     }
 
     private fun openAddImageDialog(image: Image? = null) {
@@ -95,8 +95,5 @@ class LibraryFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     companion object {
         const val ADD_IMAGE_DIALOG_CLOSE_CODE = 4001
-
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) = LibraryFragment()
     }
 }
