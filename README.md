@@ -1,10 +1,15 @@
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.71-blue.svg)](https://kotlinlang.org)   [![Gradle](https://img.shields.io/badge/Gradle-6.3-blue?style=flat)](https://gradle.org)  
-  
-<img src="screenshots/logo.png">  
-  
-<img src="screenshots/screenshots.png">  
-  
+<p align="center">
+  <img src="Screenshots/logo.png">  
+</p>
+
+<p align="center">
+  <img src="Screenshots/screenshots.png">  
+</p>
+
+
 ## Tech-stack  
+
 Min API level is set to [`24`]  
   
 * Tech-stack  
