@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginHorizontal="24dp"
+        android:fontFamily="@font/oswald_bold"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:text="@string/fragment_home_title"
+        android:textColor="@color/mine_shaft"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_augmented_reality" />
 </FrameLayout>

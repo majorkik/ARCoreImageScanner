@@ -58,12 +58,12 @@ class AddImageDialog : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (imagePath.isNotBlank()) {
-            btn_remove.setVisibility(true)
+//            btn_remove.setVisibility(true)
             btn_add.text = getString(R.string.dialog_add_image_save)
             image.load(File(imagePath))
             title_edit.setText(imageTitle)
         } else {
-            btn_remove.setVisibility(false)
+//            btn_remove.setVisibility(false)
             btn_add.text = getString(R.string.dialog_add_image_add)
         }
 

@@ -20,5 +20,6 @@
     <string name="arscene_exception_loading_augmented_image">I/O exception loading augmented image bitmap.</string>
     <string name="arscene_exception_creating_session">Exception creating session</string>
     <string name="arscene_progress_loading_images">Loading images</string>
+    <string name="fragment_home_title">Home</string>
 
 </resources>
